@@ -1,0 +1,1391 @@
+6-Month Backend Engineering Master Plan
+
+My goal
+
+I want to become strong at backend engineering, Go, databases, distributed systems, and system design over the next 6 months.
+
+I have approximately:
+
+14 hours/week × 26 weeks ≈ 364 hours
+
+I want to avoid passive learning. My learning system should be:
+
+Learn → Explain → Implement → Break → Fix → Explain again
+
+I want to be able to:
+
+build backend infrastructure myself
+understand why patterns exist
+recognize patterns during system design
+debug failure modes
+solve SQL problems comfortably
+continue improving DSA
+explain backend concepts naturally during interviews without memorized answers or stuttering
+
+
+
+Daily Habit
+
+My target is 3–4 hours/day.
+
+Standard day
+
+Activity
+
+Time
+
+Backend pattern/topic
+
+45–60 min
+
+SQL problem
+
+30–40 min
+
+DSA problem
+
+45–60 min
+
+Project
+
+~60 min
+
+Interview speaking
+
+15–20 min
+
+Total
+
+~3.5–4h
+
+If I don't have enough time:
+
+Don't sacrifice the habit entirely.
+
+Do a shorter version:
+
+backend concept
+SQL
+DSA
+30–60 min project
+short explanation practice
+
+
+
+The Core Weekly System
+
+Backend topics are NOT necessarily fixed to exactly one week.
+
+Small topics:
+
+2–4 days
+
+Medium topics:
+
+~1 week
+
+Large topics:
+
+1–2 weeks
+
+Examples:
+
+Pagination → a few days
+Rate limiting → ~1 week
+Caching → 1–2 weeks
+Queues → 1–2 weeks
+Kafka → 1–2 weeks
+Sharding → ~1 week
+Distributed systems/Raft → longer
+
+The topic ends when I can:
+
+Explain it
+Implement a basic version
+Explain failure modes
+Explain trade-offs
+
+
+
+Backend Patterns Master Checklist
+
+I want to eventually cover this entire list.
+
+I do NOT need to implement every item.
+
+Use:
+
+🟢 Theory learned
+
+🔵 Implemented
+
+🟣 Can explain
+
+🔴 Can design
+
+
+
+1. API & Request Patterns
+
+Learn:
+
+REST
+RPC
+gRPC
+API Gateway
+BFF — Backend for Frontend
+Aggregator
+Pagination
+Offset pagination
+Cursor pagination
+Idempotency keys
+Request deduplication
+API versioning
+Webhooks
+Long polling
+WebSockets
+Server-Sent Events
+Request validation
+Middleware
+
+Important mini-projects:
+
+HTTP server
+API gateway
+pagination implementation
+webhook receiver
+WebSocket server
+
+
+
+2. Caching Patterns
+
+Learn:
+
+Cache-aside
+Read-through
+Write-through
+Write-behind/write-back
+Refresh-ahead
+Cache warming
+TTL
+Negative caching
+Cache invalidation
+Cache stampede
+Thundering herd
+Cache penetration
+Cache avalanche
+Hot keys
+Local/in-process cache
+Distributed cache
+LRU
+LFU
+Cache consistency
+
+Main project:
+
+Redis-backed caching service
+
+Progression:
+
+API
+↓
+Cache
+↓ miss
+Database
+↓
+Cache
+
+Then deliberately create:
+
+100 requests
+↓
+expired cache
+↓
+100 database requests
+
+and fix the cache stampede.
+
+
+
+3. Async / Queue Patterns
+
+Learn:
+
+Producer/consumer
+Work queue
+Message queue
+Worker pool
+Competing consumers
+Acknowledgements
+Visibility timeout
+Retry queue
+Delayed queue
+Priority queue
+Dead Letter Queue
+Poison messages
+At-most-once delivery
+At-least-once delivery
+Idempotent consumer
+Backpressure
+
+Technologies:
+
+RabbitMQ
+Kafka
+Redis Streams
+SQS concepts
+
+Main project:
+
+Background job processing system
+
+API
+↓
+Queue
+↓
+Worker 1
+Worker 2
+Worker 3
+
+Implement:
+
+enqueue
+dequeue
+workers
+persistence
+ACK
+retries
+exponential backoff
+DLQ
+graceful shutdown
+crash recovery
+
+
+
+4. Event-Driven Patterns
+
+Learn:
+
+Pub/Sub
+Event notification
+Event-carried state transfer
+Consumer groups
+Event replay
+Event versioning
+Schema evolution
+Event sourcing
+CQRS
+Outbox
+Inbox
+CDC
+Idempotent consumers
+
+Main project:
+
+Event-driven order system
+
+Order API
+↓
+PostgreSQL
+↓
+Kafka
+├── Inventory
+├── Email
+└── Analytics
+
+
+
+5. Fan-out / Fan-in / Parallel Processing
+
+Learn:
+
+Fan-out
+Fan-in
+Scatter-gather
+MapReduce
+Pipelines
+Batch processing
+Micro-batching
+Work stealing
+Parallel workers
+
+Main project:
+
+API aggregator
+
+                 ┌→ User
+                 ├→ Orders
+Request ─────────┼→ Recommendations
+                 └→ Notifications
+                         ↓
+                     Aggregator
+                         ↓
+                      Response
+
+Implement with Go concurrency.
+
+Then add:
+
+timeouts
+cancellation
+partial failure
+retry
+fallback
+
+
+
+6. Reliability Patterns
+
+Learn:
+
+Timeouts
+Deadlines
+Retries
+Exponential backoff
+Jitter
+Circuit breaker
+Bulkhead
+Fallback
+Graceful degradation
+Load shedding
+Backpressure
+Hedged requests
+Health checks
+
+Main project:
+
+Resilient HTTP client
+
+Create an unreliable server that randomly:
+
+returns 500
+takes 5 seconds
+returns 429
+disconnects
+succeeds
+
+Client:
+
+Timeout
+↓
+Retry
+↓
+Backoff
+↓
+Jitter
+↓
+Circuit Breaker
+↓
+Fallback
+
+
+
+7. Traffic & Scaling Patterns
+
+Learn:
+
+Load balancing
+Round robin
+Weighted routing
+Least connections
+Consistent hashing
+Reverse proxy
+L4 vs L7
+Connection pooling
+Horizontal scaling
+Vertical scaling
+Autoscaling
+Rate limiting
+Throttling
+Load shedding
+
+Main project:
+
+HTTP Load Balancer
+
+Client
+↓
+Load Balancer
+├── Server A
+├── Server B
+└── Server C
+
+Implement:
+
+Round robin
+Random
+Least connections
+Health checks
+Unhealthy server removal
+Consistent hashing
+
+
+
+8. Rate Limiting
+
+Learn separately because it's important.
+
+Algorithms:
+
+Fixed window
+Sliding window
+Sliding window counter
+Token bucket
+Leaky bucket
+
+Then:
+
+Redis-backed distributed rate limiter
+
+Client
+↓
+Rate limiter
+↓
+API
+
+Test:
+
+normal traffic
+bursts
+multiple users
+thousands of users
+multiple API servers
+
+Understand:
+
+atomicity
+distributed state
+Redis
+burst handling
+
+
+
+9. Database Patterns
+
+Learn:
+
+Transactions
+ACID
+Isolation levels
+MVCC
+Indexes
+B-trees
+Query plans
+EXPLAIN
+Connection pooling
+Read replicas
+Replication
+Partitioning
+Sharding
+Denormalization
+Materialized views
+Optimistic locking
+Pessimistic locking
+CQRS
+Distributed transactions
+Saga
+Outbox
+CDC
+Two-phase commit
+
+Important distinction:
+
+SQL problems teach querying.
+
+Projects/theory teach database engineering.
+
+
+
+10. Distributed Systems Patterns
+
+Learn:
+
+Distributed locks
+Leases
+Leader election
+Heartbeats
+Quorum
+Consensus
+Raft
+Leader/follower
+Gossip
+Consistent hashing
+Distributed ID generation
+Service discovery
+Consistency models
+CAP theorem
+
+Main later project:
+
+Sharded key-value store
+
+Client
+↓
+Router
+├── Shard 1
+├── Shard 2
+└── Shard 3
+
+Initially:
+
+hash(key) % N
+
+Then implement:
+
+consistent hashing
+
+Eventually experiment with:
+
+adding nodes
+removing nodes
+replication
+failover
+
+
+
+11. Observability
+
+Learn:
+
+Structured logging
+Metrics
+Prometheus
+Grafana
+Distributed tracing
+OpenTelemetry
+Correlation IDs
+Health checks
+Readiness
+Liveness
+p50
+p95
+p99
+RED metrics
+Alerting
+
+Important principle:
+
+A production system isn't complete if you can't tell when and why it is failing.
+
+Instrument previous projects rather than building a separate useless demo.
+
+
+
+12. Backend Security
+
+Learn:
+
+Authentication
+Authorization
+RBAC
+OAuth2
+JWT
+API keys
+mTLS
+Secrets management
+Encryption
+Input validation
+CORS
+CSRF
+Rate limiting
+Audit logging
+
+These should be learned alongside actual API development.
+
+
+
+SQL LEETCODE TRACK
+
+I want one SQL problem every day.
+
+Treat it like DSA.
+
+Stage 1 — Basic querying
+
+~15 problems
+
+SELECT
+WHERE
+ORDER BY
+LIMIT
+DISTINCT
+CASE
+NULL
+COALESCE
+
+Stage 2 — Aggregation
+
+~15
+
+GROUP BY
+HAVING
+COUNT
+SUM
+AVG
+MIN/MAX
+conditional aggregation
+
+Stage 3 — JOINs
+
+~20
+
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+self join
+multiple joins
+joins with aggregates
+
+Stage 4 — Subqueries
+
+~10
+
+subqueries
+correlated subqueries
+EXISTS
+NOT EXISTS
+IN
+scalar subqueries
+
+Stage 5 — Window functions
+
+~20
+
+ROW_NUMBER
+RANK
+DENSE_RANK
+LAG
+LEAD
+SUM OVER
+AVG OVER
+PARTITION BY
+
+This is particularly important for interviews.
+
+Stage 6 — CTEs
+
+~10
+
+CTE
+recursive CTEs eventually
+
+Stage 7 — Dates
+
+~10
+
+date arithmetic
+intervals
+grouping by month
+rolling periods
+consecutive dates
+retention
+
+Stage 8 — Advanced database SQL
+
+Learn separately:
+
+transactions
+isolation
+locks
+deadlocks
+indexes
+EXPLAIN
+optimization
+normalization
+denormalization
+
+Potential practice platforms:
+
+LeetCode Database
+HackerRank SQL
+DataLemur
+StrataScratch
+
+
+
+SQL Problem-Solving Method
+
+For each problem:
+
+First ~20 minutes
+
+Try yourself.
+
+Don't immediately look at the answer.
+
+Ask:
+
+What information do I actually need to produce?
+
+Work backwards.
+
+Example:
+
+Find the highest-paid employee in every department.
+
+Think:
+
+Need employee
+↓
+Need department
+↓
+Need maximum salary per department
+↓
+GROUP BY department
+↓
+Need to connect maximum salary back to employee
+↓
+JOIN or window function
+
+After solving, write one sentence:
+
+"This problem taught me that DENSE_RANK lets me rank rows independently within each department."
+
+
+
+DSA
+
+Continue:
+
+1 problem/day
+
+Follow the existing DSA curriculum rather than constantly switching resources.
+
+The DSA problem is separate from the SQL problem.
+
+Goal:
+
+pattern recognition
+implementation
+problem solving
+consistency
+
+Don't let backend learning cause DSA to disappear.
+
+
+
+Go Concurrency Track
+
+Since Go is my priority backend language, explicitly learn:
+
+goroutines
+channels
+buffered/unbuffered channels
+select
+mutex
+RWMutex
+atomic operations
+wait groups
+context
+cancellation
+worker pools
+race conditions
+deadlocks
+starvation
+synchronization
+CPU-bound vs I/O-bound workloads
+
+Build concurrency into other projects instead of only doing toy examples.
+
+
+
+6-Month Timeline
+
+Month 1 — Networking + databases
+
+Weeks 1–2
+
+HTTP + TCP.
+
+Build:
+
+Go HTTP server from scratch
+
+Learn:
+
+TCP
+sockets
+HTTP
+HTTP/1.1
+HTTP/2 basics
+TLS basics
+DNS
+reverse proxies
+
+Weeks 3–4
+
+PostgreSQL.
+
+Learn:
+
+schema design
+indexes
+B-trees
+transactions
+ACID
+isolation
+locks
+connection pooling
+EXPLAIN
+
+Build:
+
+URL shortener
+
+Goal:
+
+Explain:
+
+What happens from HTTP request → backend → PostgreSQL → response?
+
+
+
+Month 2 — Redis + caching + rate limiting
+
+Week 5
+
+Redis fundamentals.
+
+Week 6
+
+Caching patterns.
+
+Add Redis cache to URL shortener.
+
+Create and fix cache stampede.
+
+Weeks 7–8
+
+Rate limiter.
+
+Implement:
+
+Fixed window
+Sliding window
+Token bucket
+Redis distributed version
+
+
+
+Month 3 — Concurrency + queues
+
+Week 9
+
+Go concurrency.
+
+Weeks 10–11
+
+Background job queue.
+
+Implement:
+
+worker pool
+ACK
+retry
+backoff
+DLQ
+persistence
+crash recovery
+
+Week 12
+
+RabbitMQ + Kafka concepts.
+
+Understand:
+
+queue
+exchange
+topic
+partition
+offset
+consumer group
+delivery semantics
+
+
+
+Month 4 — Distributed request patterns
+
+Week 13
+
+Fan-out/fan-in aggregator.
+
+Week 14
+
+Reliability:
+
+timeout
+retry
+backoff
+jitter
+circuit breaker
+bulkhead
+fallback
+
+Week 15
+
+Load balancer.
+
+Week 16
+
+Backpressure + batching.
+
+
+
+Month 5 — Event-driven architecture
+
+Week 17
+
+Pub/Sub.
+
+Weeks 18–19
+
+Kafka.
+
+Build event-driven order system.
+
+Week 20
+
+Outbox + idempotency.
+
+Build:
+
+Order
+↓
+Postgres
+↓
+Outbox
+↓
+Publisher
+↓
+Kafka
+
+
+
+Month 6 — Distributed systems + system design
+
+Week 21
+
+Replication.
+
+Week 22
+
+Sharding + consistent hashing.
+
+Week 23
+
+Distributed locks + leader election + quorum + Raft theory.
+
+Week 24
+
+Observability.
+
+Weeks 25–26
+
+System design.
+
+Practice:
+
+URL shortener
+video platform
+WhatsApp-style messaging
+location system
+notification system
+
+
+
+Weekly Time Budget
+
+The overall 14-hour/week target can be approximately:
+
+Activity
+
+Hours
+
+Theory
+
+3
+
+Project
+
+7
+
+Testing/debugging/benchmarking
+
+2
+
+DSA
+
+1
+
+Review/speaking
+
+1
+
+Total
+
+14
+
+Daily distribution can vary.
+
+The important thing is the weekly total and consistency.
+
+
+
+Interview Speaking Training
+
+This is a major part of the plan.
+
+I don't just want to KNOW:
+
+"What is concurrency?"
+
+I want to be able to answer naturally:
+
+"Concurrency is the ability of a system to make progress on multiple tasks during overlapping periods of time..."
+
+without freezing, rambling, or trying to remember a textbook definition.
+
+
+
+60–90 Second Speaking Drill
+
+Pick one concept.
+
+Give myself ~30 seconds to think.
+
+Then speak for 60–90 seconds without notes.
+
+Use this structure:
+
+1. Definition
+
+What is it?
+
+2. Intuition
+
+Explain it simply.
+
+3. Example
+
+Give a backend example.
+
+4. Contrast
+
+Compare it with something related.
+
+5. Why it matters
+
+Explain why engineers use it.
+
+Example:
+
+What is concurrency?
+
+"Concurrency is the ability of a system to make progress on multiple tasks during overlapping periods of time. It doesn't necessarily mean they execute at exactly the same time; the system can switch between tasks. For example, a web server can handle one request while another is waiting for the database. Parallelism is different because it means multiple tasks are actually executing simultaneously, usually on different CPU cores. Concurrency is particularly useful in backend systems because requests spend a lot of time waiting for I/O."
+
+I want answers to sound like my explanation, not a memorized definition.
+
+
+
+Interview Answer Bank
+
+Maintain:
+
+interview/
+├── networking.md
+├── databases.md
+├── redis.md
+├── concurrency.md
+├── queues.md
+├── kafka.md
+├── system-design.md
+└── behavioral.md
+
+For each concept:
+
+WHAT
+WHY
+HOW
+EXAMPLE
+TRADEOFF
+
+Example:
+
+Concurrency
+
+What?
+
+Multiple tasks making progress during overlapping periods.
+
+Why?
+
+Efficiently handle I/O-bound workloads.
+
+How?
+
+Threads, goroutines, async/event loops, etc.
+
+Example?
+
+Web server handling multiple requests.
+
+Tradeoff?
+
+Concurrency introduces races, deadlocks, contention and synchronization complexity.
+
+Then close the notes and explain it from memory.
+
+
+
+Speaking Progression
+
+Level 1 — Definitions
+
+What is Redis?
+What is caching?
+What is a queue?
+What is concurrency?
+What is async?
+What is a goroutine?
+What is an index?
+What is a transaction?
+
+Level 2 — Comparisons
+
+concurrency vs parallelism
+process vs thread
+Redis vs PostgreSQL
+RabbitMQ vs Kafka
+cache vs database
+sync vs async
+REST vs gRPC
+queue vs pub/sub
+
+Level 3 — Why?
+
+Why Redis?
+Why a queue?
+Why Kafka?
+Why indexes?
+Why connection pooling?
+Why rate limiting?
+Why idempotency?
+
+Level 4 — System design
+
+Design URL shortener.
+Design notification system.
+Design job processing system.
+Design rate limiter.
+Design WhatsApp-like system.
+
+
+
+The Learning Loop
+
+For EVERY major backend pattern:
+
+Learn
+↓
+Explain
+↓
+Implement
+↓
+Break it
+↓
+Observe failure
+↓
+Fix it
+↓
+Explain again
+
+Example:
+
+Caching
+
+Learn cache-aside
+↓
+Implement Redis cache
+↓
+Learn TTL/invalidation
+↓
+Implement
+↓
+Create cache stampede
+↓
+Fix stampede
+↓
+Explain caching from memory
+
+Queues
+
+Learn queue
+↓
+Implement queue
+↓
+Add workers
+↓
+Kill worker
+↓
+Add retry
+↓
+Create poison message
+↓
+Add DLQ
+↓
+Explain queue from memory
+
+
+
+Project Repository
+
+Eventually aim for:
+
+backend-learning/
+│
+├── 01-http-server-go/
+├── 02-url-shortener/
+├── 03-redis-cache/
+├── 04-rate-limiter/
+├── 05-job-queue/
+├── 06-fanout-fanin/
+├── 07-resilient-client/
+├── 08-load-balancer/
+├── 09-websocket-server/
+├── 10-kafka-event-system/
+├── 11-outbox-pattern/
+├── 12-sharded-kv-store/
+└── 13-toy-raft/
+
+13 small infrastructure projects > one giant CRUD/Amazon clone.
+
+
+
+Connection to My Existing PDF/Document Backend
+
+I already have a PDF/document-processing backend project.
+
+Eventually I want to integrate the concepts into it:
+
+Client
+↓
+API
+↓
+Redis cache
+↓
+PostgreSQL
+↓
+Queue
+↓
+Worker pool
+├── PDF processing
+├── Translation
+└── Embedding
+↓
+Vector DB
+
+This becomes the bridge between:
+
+toy infrastructure → backend engineering → production architecture → system design
+
+
+
+Priority Levels
+
+Not every pattern deserves equal depth.
+
+🔴 Deeply understand + build
+
+Caching
+Queues
+Worker pools
+Pub/Sub
+Fan-out/fan-in
+Rate limiting
+Load balancing
+Retry/backoff
+Circuit breaker
+Backpressure
+Idempotency
+Transactions
+Indexes
+Replication
+Sharding
+Consistent hashing
+WebSockets
+Kafka
+Outbox
+CQRS
+Distributed locks
+
+🟡 Understand + implement once
+
+API Gateway
+BFF
+Aggregator
+Pagination
+Webhooks
+SSE
+Priority queues
+Delayed queues
+Batch processing
+CDC
+Saga
+Materialized views
+Optimistic/pessimistic locking
+Service discovery
+Health checks
+Observability
+
+🟢 Learn conceptually
+
+Raft
+Two-phase commit
+Gossip
+Event sourcing
+MapReduce
+Hedged requests
+Work stealing
+Multi-region replication
+Advanced consistency models
+
+
+
+Final Objective
+
+After 6 months, I should not merely know definitions.
+
+When given a backend problem, I should naturally ask:
+
+What's the bottleneck?
+
+Is this synchronous or asynchronous?
+
+Do I need a queue?
+
+Do I need caching?
+
+What's the consistency requirement?
+
+What happens if this service is slow?
+
+What happens if it crashes?
+
+Can this request be retried?
+
+Is the operation idempotent?
+
+Do I need fan-out/fan-in?
+
+How does this scale horizontally?
+
+What happens under backpressure?
+
+How do I observe failures?
+
+And during interviews I should be able to say that reasoning clearly and naturally.
+
+The complete learning cycle is:
+
+Theory → SQL → DSA → implementation → failure → debugging → explanation → interview articulation.
