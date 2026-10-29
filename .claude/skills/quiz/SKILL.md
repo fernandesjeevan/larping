@@ -30,6 +30,8 @@ don't show the key, and at the end write the scores with
 3. After grading, give a **model answer in first person**, 30–60 s spoken length, using the
    learner's projects as the example.
 4. End: total score, the 3 weakest points as new flashcards appended to `flashcards.md`, and update
-   the score history in `progress.md`.
+   the score history in `progress.md`. Mark the topic ✅ in `TRACKER.md` (with its score) and log
+   the struggles and insights in `JOURNAL.md`. If a weak answer shows a missing foundation
+   (not just a forgotten fact), add it to `TRACKER.md` as ➕.
 
 Do not reveal answers before the learner tries. Do not accept buzzwords without mechanism.

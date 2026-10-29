@@ -1,5 +1,5 @@
 # S03 — Sockets: your program's handle on a TCP connection
-> ⏱ 15–20 min · Day 1 · Hands-on (2 terminals, Python stdlib only) · Prev: S02 · Next: S04
+> ⏱ 15–20 min · Day 1 · Hands-on (2 terminals, Python stdlib only) · Prev: S02b · Next: S04
 
 ## What a socket is
 A **socket** is the object your OS hands your program so it can use TCP. You write bytes into

@@ -13,6 +13,7 @@ Long free stretch? Chain several. Only 10 minutes? Do one.
 |---|---|---|---|---|---|---|
 | ☐ | 1 | Thu 29 | How computers find each other (IP, ports, packets) | 10–15 | read + 3 commands | `net101/S01-how-computers-find-each-other.md` |
 | ☐ | 2 | Thu 29 | TCP: reliable byte stream, handshake | 15 | read | `net101/S02-tcp-reliable-byte-stream.md` |
+| ☐ | 2b ➕ | Thu 29 | Bytes vs text (encode/decode, UTF-8) | 10 | read + Python shell | `net101/S02b-bytes-vs-text.md` |
 | ☐ | 3 | Thu 29 | Sockets hands-on: echo server | 15–20 | code along | `net101/S03-sockets-hands-on.md` |
 | ☐ | 4 | Thu 29 | L01 Part A: concurrency vs parallelism, GIL | 15 | read + run | `larp/L01-async-await.md` |
 | ☐ | 5 | Fri 30 | Framing: where does a message end? | 20–25 | exercise + tests | `net101/S04-framing.md` → `lessons/N01-framing/` |
@@ -29,15 +30,18 @@ Long free stretch? Chain several. Only 10 minutes? Do one.
 
 Optional if time is left on Sunday: "Tell me about yourself" v1 (90 s) as a `/quiz` behavioural drill.
 
-**Rough load:** Thu ≈ 60 min · Fri ≈ 75 min · Sat ≈ 75–110 min · Sun ≈ 75–90 min.
+**Rough load:** Thu ≈ 70 min · Fri ≈ 75 min · Sat ≈ 75–110 min · Sun ≈ 75–90 min.
+
+This plan isn't fixed. If a session shows a gap, the tutor inserts a ➕ session here (logged in
+`TRACKER.md`), and later sessions slide back if needed.
 
 ## How to run a session
 - Passive (reading): open the file, read, try the snippet, answer the "Check yourself"
   questions, either out loud or by pasting your answers to me for grading.
 - Exercise: `/lesson` tells you what to do; `/check` when tests are green; `/hint` when stuck.
 - Quiz: `/quiz L01` etc. I ask one question at a time and grade it.
-- End of each sitting: say **"wrap up"**. I update `progress.md`, the Excel planner and
-  flashcards, then commit and push, so your personal laptop is in sync.
+- End of each sitting: say **"wrap up"**. I update `progress.md`, `TRACKER.md`, `JOURNAL.md`,
+  flashcards and the Excel planner, then commit and push, so your personal laptop is in sync.
 
 ## After Sunday
 Week 2 follows the same pattern from the planner: L03–L06 LARP topics + LAB01 (caching),

@@ -46,3 +46,6 @@ trade-offs handled? edge cases?). If solid, run stage 4 (LARP) as described in t
 - If they ask "show me", show a clean reference solution, explain it line by line, and
   have them retype it from memory afterwards (their own words, not copy-paste).
 - Always update `progress.md` and end with the next action.
+- Record in `JOURNAL.md` what their attempt showed: misconceptions, what they got right
+  unprompted, where they needed hints. If the attempt exposes a missing prerequisite, add it to
+  `TRACKER.md` as ➕.

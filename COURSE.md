@@ -29,7 +29,10 @@ Run tests yourself: `python -m pytest lessons/<lesson-folder> -q`
 Titles name the *problem*. The pattern behind each one gets its name at stage 3.
 
 **0. Networking from zero** (`net101/`, 10–20 min reads)
-- S01 IP, ports, packets · S02 TCP · S03 Sockets hands-on · S04 Framing (+ exercise N01) · S05 HTTP/HTTPS
+- S01 IP, ports, packets · S02 TCP · S02b Bytes vs text · S03 Sockets hands-on · S04 Framing (+ exercise N01) · S05 HTTP/HTTPS
+
+The course map isn't fixed: `TRACKER.md` is the living version (taught / left / added topics), and
+`JOURNAL.md` records how each session went.
 
 **A. How a backend actually serves a request**
 - A01 Serving HTTP with nothing but a socket · *LAB00, L01*

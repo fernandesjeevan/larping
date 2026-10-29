@@ -1,5 +1,5 @@
 # S02 — TCP: turning unreliable packets into a reliable stream
-> ⏱ 15 min · Day 1 · Passive · Prev: S01 · Next: S03
+> ⏱ 15 min · Day 1 · Passive · Prev: S01 · Next: S02b (bytes vs text)
 
 ## The problem TCP solves
 From S01: packets get lost, reordered, duplicated. Your code doesn't want to deal with that.

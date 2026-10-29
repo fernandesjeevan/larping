@@ -12,7 +12,9 @@ pass 3-YOE backend + AI interviews. The course map and instructor notes are in
 Lesson file layout is in `references/lesson-template.md`.
 
 ## 1. Figure out where the learner is
-1. Read `PLAN.md`, `progress.md` and `flashcards.md` at the workspace root.
+1. Read `PLAN.md`, `progress.md`, `flashcards.md`, `TRACKER.md` and the "Carry forward" block
+   of `JOURNAL.md` at the workspace root. Adapt to it: re-check a past struggle if it's relevant,
+   reuse explanations that worked, pay off owed follow-ups.
 2. If an argument names a lesson/session id, use it. `next` or no argument = the first unticked
    row in `PLAN.md`. `wrap` = do the end-of-sitting routine in `CLAUDE.md` (progress, Excel,
    commit/push).
@@ -66,6 +68,13 @@ Stage 0 + 1 usually happen in one `/lesson` call. Write the README for stage 0â€
   print the mapped LARP topic / Saturday lab from the curriculum.
 - Keep the tone of a good senior colleague: direct, specific, no fluff, praise only what's
   actually good.
+
+## 3b. Grow the syllabus while teaching
+If the learner's answers or questions reveal a missing prerequisite or a natural follow-up topic,
+follow "The syllabus is alive" in `CLAUDE.md`: say so in one line, add a âž• entry to `TRACKER.md`
+(with a change-log row), and either teach it now as a short session or queue it in `PLAN.md`.
+Also note mid-session in `JOURNAL.md` anything they struggled with, *as it happens*, so it isn't
+lost if the sitting ends abruptly.
 
 ## 4. Bookkeeping (always)
 - Update `progress.md`: current lesson, stage, dates (today's date), and score notes.
