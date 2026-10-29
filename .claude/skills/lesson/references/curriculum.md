@@ -4,6 +4,11 @@ Each entry: **Problem** (learner-facing) · **Brute-force ask** · **Break round
 how to *prove* them with a test or a number) · **Pattern(s) reached** · **Maps to** (LARP topic /
 Saturday lab / project). Pure Python + stdlib unless marked ⚙ (optional real-infra extra).
 
+Source list: the learner's own `backend patterns.md.txt` (repo root). Its checklist levels map to
+the planner's Theory 🟢 / Built 🔵 / Explain 🟣 / Design 🔴 columns. When a topic there isn't
+covered below (e.g. LFU, cache avalanche, hot keys, refresh-ahead), fold it into the nearest
+lesson's stage 3.
+
 Order is by teaching dependency, not calendar. When a lesson matches a Saturday lab, finishing
 the lesson (plus its ⚙ extra if the lab names Redis/Postgres) satisfies that lab's "Done when".
 
