@@ -5,7 +5,7 @@ description: Give an escalating hint for the current Backend Patterns lesson wit
 
 # /hint — escalating hints
 
-Read `progress.md` (current lesson + stage), the lesson `README.md`, and `solution.py`.
+Read `progress.md` (current lesson + stage) and the learner's `solution.py`; open the lesson `README.md` only if needed.
 Count prior hints for this stage in `progress.md` (field `hints:`) and give the next level:
 
 1. **Nudge:** a question that reframes the problem ("What does `recv` return when the

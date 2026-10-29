@@ -1,20 +1,18 @@
-# Progress
+# Session brief (the ONLY file read at session start; keep it under ~40 lines)
 
-**Current:** PLAN.md session 1, S01 How computers find each other · hints: 0
-**Schedule:** `PLAN.md` · **Syllabus:** `TRACKER.md` · **How it went:** `JOURNAL.md`
+**Now:** S01 How computers find each other · `net101/S01-how-computers-find-each-other.md` · hints: 0
+**Open exercises:** none started (N01 framing, A01 LAB00 later)
 
-## Lessons (exercises)
-| Lesson | Status | Stage | Started | Done | Notes |
-|---|---|---|---|---|---|
-| N01 framing | not started | 0 | | | |
-| A01 HTTP from sockets (LAB00) | not started | 0 | | | |
+## Up next (max 4)
+1. S01 IP, ports, packets · `net101/S01-...`
+2. S02 TCP · `net101/S02-...`
+3. S02b ➕ Bytes vs text · `net101/S02b-...`
+4. S03 Sockets hands-on · `net101/S03-...`
 
-## LARP topics
-| Topic | Planned | Read | Quiz score | Done |
-|---|---|---|---|---|
-| L01 async/await | Wed 28 Oct | | | |
-| L02 FastAPI internals | Thu 29 Oct | | | |
+## Carry forward (struggles, insights, owed follow-ups; rolling, max ~8 bullets)
+- Learner is a self-described networking beginner: start from zero, analogy first, then runnable code.
+- Sittings are 10–60 min on work breaks; always stop at a clean point.
 
-## Quiz / mock history
-| Date | Type | Topics | Score | Weakest |
-|---|---|---|---|---|
+## Last 3 scores
+| Date | What | Score |
+|---|---|---|

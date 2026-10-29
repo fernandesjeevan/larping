@@ -12,12 +12,12 @@ pass 3-YOE backend + AI interviews. The course map and instructor notes are in
 Lesson file layout is in `references/lesson-template.md`.
 
 ## 1. Figure out where the learner is
-1. Read `PLAN.md`, `progress.md`, `flashcards.md`, `TRACKER.md` and the "Carry forward" block
-   of `JOURNAL.md` at the workspace root. Adapt to it: re-check a past struggle if it's relevant,
-   reuse explanations that worked, pay off owed follow-ups.
-2. If an argument names a lesson/session id, use it. `next` or no argument = the first unticked
-   row in `PLAN.md`. `wrap` = do the end-of-sitting routine in `CLAUDE.md` (progress, Excel,
-   commit/push).
+1. Read **only** `progress.md` (session brief) and then the one file for the session you'll teach.
+   Don't open TRACKER/JOURNAL/past lessons/curriculum unless needed (token budget, see `CLAUDE.md`).
+   Adapt to its carry-forward block: re-check a past struggle if relevant, reuse what worked.
+2. If an argument names a lesson/session id, use it. `next` or no argument = "Now" in
+   `progress.md`. `wrap` = do the end-of-sitting routine in `CLAUDE.md` (progress, trackers,
+   Excel, commit/push).
 3. If the learner is mid-lesson, resume at their stage. Don't re-teach what's done; give a
    two-line recap and continue.
 4. Ask how much time they have if it isn't obvious, and fit the work to it (10 min = one

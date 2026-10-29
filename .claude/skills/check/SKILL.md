@@ -6,7 +6,7 @@ argument-hint: "[lesson id, optional]"
 
 # /check — review the learner's attempt
 
-1. Read `progress.md` to find the current lesson and stage, then read that lesson's entry in
+1. Read `progress.md` (only) to find the current lesson and stage, then Grep that lesson's entry in
    `../lesson/references/curriculum.md` and the learner's `solution.py`.
 2. Run all tests in the lesson folder: `python -m pytest lessons/<dir> -q` (timeout 120 s).
    Report the real result; never claim green if it isn't.

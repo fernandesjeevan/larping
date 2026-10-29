@@ -38,22 +38,34 @@ prerequisite (something the learner needs *before* this topic) or a natural foll
    `PLAN.md`; otherwise queue it in `PLAN.md` / `TRACKER.md` for later. Lesson-level additions
    also go into `.claude/skills/lesson/references/curriculum.md`.
 
-## The four state files (each has one job)
-| File | Job |
-|---|---|
-| `progress.md` | where am I *right now*: current session, exercise stage, hint counter, quiz history |
-| `TRACKER.md` | the living syllabus: taught ✅ / in progress 🟡 / left ⬜ / added ➕, plus the change log |
-| `JOURNAL.md` | per-session log: taught, learnt (evidence), struggled with, insights; the "Carry forward" block at its top is **read at the start of every session** and used to adapt teaching (revisit struggles, reuse analogies that landed, pay off owed follow-ups) |
-| `flashcards.md` | weak answers to drill with `/quiz review` |
+## State files and token budget
+Saving tokens is a priority. **At session start read only `progress.md`** (plus the file for the
+session you're about to teach). Do **not** open past lessons, `TRACKER.md`, `JOURNAL.md`,
+`flashcards.md`, `COURSE.md`, the curriculum, the roadmap .docx or the Excel unless the learner
+asks or the task needs them (e.g. `/quiz review` needs flashcards; writing a new session needs
+its curriculum entry, found with Grep rather than a full read).
+
+| File | Job | Read? |
+|---|---|---|
+| `progress.md` | session brief: now, up next (≤4), carry-forward insights/struggles, last scores | **every session** |
+| `TRACKER.md` | full living syllabus: ✅/🟡/⬜/➕ + change log | write only (edit rows found with Grep) |
+| `JOURNAL.md` | per-session detail archive | append only |
+| `flashcards.md` | weak answers | append only; read for `/quiz review` |
+| Excel `Course Log` sheet | done sessions (date, score, struggle) + up next | write via script only |
+
+When updating, use Grep to find the exact row, then Edit it; append with Edit at a known anchor
+or `>>`. Never read a whole archive file just to change one line.
 
 ## Start of every sitting
-Read the "Carry forward" block in `JOURNAL.md` and `progress.md` before teaching. If a past struggle
-relates to today's topic, check it with one quick question first.
+Read `progress.md`. If a carry-forward struggle relates to today's topic, check it with one quick
+question first.
 
 ## End of every sitting ("wrap up", or when the learner says they're leaving)
-1. Tick finished sessions in `PLAN.md`; update `progress.md` and `flashcards.md`.
-   Update `TRACKER.md` statuses. Add a `JOURNAL.md` session entry and refresh its "Carry forward"
-   block (struggles, insights, owed follow-ups).
+1. Rewrite `progress.md` (now / up next / carry-forward / last scores; keep it short and drop
+   stale bullets). Tick the `PLAN.md` row(s). Grep-and-edit the `TRACKER.md` status row(s). Append a
+   `JOURNAL.md` entry. Append flashcards if any.
+   Excel: `done <ID> "<topic>" --score x/y --note "<struggle or insight>"` for each finished
+   session, then `next "<ID>:<topic>" ...` with the next 3–4 sessions.
 2. Update the Excel planner with `tools/update_planner.py` (run via
    `uv run --no-project --with openpyxl python tools/update_planner.py ...`):
    LARP quiz scores (`larp`), finished labs (`lab`), pattern progress (`pattern`), and a line in
