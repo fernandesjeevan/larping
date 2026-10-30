@@ -139,9 +139,29 @@ Tutor: update this after every sitting. Detail on *how it went* goes in `JOURNAL
 | L69 | SQL interview patterns | ⬜ | | |
 | L70 | Voice and multimodal pipelines (overview) | ⬜ | | |
 
+## 3. ➕ Long-term CS foundations (5–10 year horizon, self-study after the course)
+| ID | Subject | Best book | Best free course | Other materials | Status |
+|---|---|---|---|---|---|
+| F01 | Networking | *Computer Networking: A Top-Down Approach* (Kurose & Ross) | Stanford CS144 | Beej's Guide to Network Programming | ⬜ |
+| F02 | Operating systems | *Operating Systems: Three Easy Pieces* (free) | MIT 6.1810 (6.S081) | xv6 book (free) | ⬜ |
+| F03 | Databases | *Database Internals* (Petrov) | CMU 15-445 (Andy Pavlo, YouTube) | *Use The Index, Luke* (free site) | ⬜ |
+| F04 | Distributed systems | *Designing Data-Intensive Applications* (Kleppmann) | MIT 6.5840 (6.824) | Raft paper; Kleppmann's Cambridge lectures | ⬜ |
+| F05 | Algorithms & data structures | *The Algorithm Design Manual* (Skiena) | MIT 6.006 (OpenCourseWare) | NeetCode 150 | ⬜ |
+| F06 | Discrete math | *Mathematics for Computer Science* (Lehman, Leighton, Meyer; free) | MIT 6.042J (OpenCourseWare) | — | ⬜ |
+| F07 | Linear algebra | *Introduction to Linear Algebra* (Strang) | MIT 18.06 (OpenCourseWare) | 3Blue1Brown *Essence of Linear Algebra* | ⬜ |
+| F08 | Probability & stats | *Introduction to Probability* (Blitzstein & Hwang; free) | Harvard Stat 110 | *Seeing Theory* (free site) | ⬜ |
+| F09 | How LLMs work | *Build a Large Language Model (From Scratch)* (Raschka) | Karpathy *Neural Networks: Zero to Hero* | *The Illustrated Transformer* (Alammar) | ⬜ |
+| F10 | Building & evaluating LLM systems | *AI Engineering* (Chip Huyen) | Anthropic courses (github.com/anthropics/courses) | Hamel Husain's posts on evaluating LLM apps | ⬜ |
+| F11 | Data engineering | *Fundamentals of Data Engineering* (Reis & Housley) | DataTalksClub Data Engineering Zoomcamp | Kafka docs | ⬜ |
+| F12 | Software design | *A Philosophy of Software Design* (Ousterhout) | MIT 6.031 / 6.1020 readings | *Refactoring* (Fowler) | ⬜ |
+| F13 | Security | *Security Engineering* (Ross Anderson) | MIT 6.858 (OpenCourseWare) | PortSwigger Web Security Academy; OWASP Top 10 | ⬜ |
+| F14 | Observability | *Observability Engineering* (Majors et al.) | Google SRE book (free online) | Brendan Gregg's site | ⬜ |
+| F15 | Writing | *On Writing Well* (Zinsser) | Google Technical Writing courses | — | ⬜ |
+
 ## Added / changed topics log
 Every insertion, reorder or skip, with the reason, so the plan's evolution is traceable.
 
 | Date | Change | Why |
 |---|---|---|
 | 2026-10-29 | ➕ S02b Bytes vs text, inserted before S03 | S03–S05 and N01 use `b"..."`, `.encode()`, `.decode()` and byte-counted `Content-Length` without ever explaining them; a networking beginner would trip on that. |
+| 2026-10-30 | ➕ Section 3: Long-term CS foundations F01–F15 (book, free course, materials per subject) | Learner asked for the subjects to master over the next 5–10 years; kept as a self-study reference list after the backend patterns + LARP course. |

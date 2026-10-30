@@ -12,6 +12,8 @@ prep) from `Marathon_Roadmap_v4.docx` / `Marathon_Daily_Planner_v4.xlsx`. The pr
 The repo is synced with git between a **work laptop** (restricted: Python 3.11, uv, curl,
 podman; no Docker, no admin) and a **personal laptop**. Lessons must run on stdlib Python;
 anything needing Redis/Postgres is optional and marked ⚙.
+Saturday lab work lives in `labs/` (one folder per lab), done mostly on the personal laptop and
+on the work laptop when possible. GitHub remote: the private repo `larping`.
 
 ## The learner
 Self-described beginner in networking (start from zero; never assume TCP/socket knowledge).
