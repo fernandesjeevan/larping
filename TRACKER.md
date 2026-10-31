@@ -165,3 +165,4 @@ Every insertion, reorder or skip, with the reason, so the plan's evolution is tr
 |---|---|---|
 | 2026-10-29 | ➕ S02b Bytes vs text, inserted before S03 | S03–S05 and N01 use `b"..."`, `.encode()`, `.decode()` and byte-counted `Content-Length` without ever explaining them; a networking beginner would trip on that. |
 | 2026-10-30 | ➕ Section 3: Long-term CS foundations F01–F15 (book, free course, materials per subject) | Learner asked for the subjects to master over the next 5–10 years; kept as a self-study reference list after the backend patterns + LARP course. |
+| 2026-10-31 | ↪ Whole schedule moved +1 week: Excel marathon now Wed 4 Nov → Sun 30 May (L01 Wed 4, L02 Thu 5, LAB00 Sat 7); PLAN.md week 1 now Sun 1 – Sun 8 with S01–S05 as prep Sun 1 – Mon 2 | Nothing from the Thu 29 – Sun 1 catch-up was started. A +1 week shift keeps the weekly rhythm (weeknight project + LARP, Fri mock, Sat lab) intact. |

@@ -1,5 +1,5 @@
 # L01 — Python async/await and the event loop
-> LARP topic L01 (planned Wed 28 Oct) · Part A ⏱ 15 min · Part B ⏱ 20 min · Quiz ⏱ 15 min (`/quiz L01`)
+> LARP topic L01 (planned Wed 4 Nov) · Part A ⏱ 15 min · Part B ⏱ 20 min · Quiz ⏱ 15 min (`/quiz L01`)
 > Builds on: S03 experiment 2 (client 2 had to wait). Feeds: A01 break rounds, L02.
 
 ---

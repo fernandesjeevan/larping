@@ -1,5 +1,5 @@
 # L02 — FastAPI internals: ASGI, dependency injection, Pydantic v2, sync vs async
-> LARP topic L02 (planned Thu 29 Oct) · Part A ⏱ 20 min · Part B ⏱ 20 min · Quiz ⏱ 15 min (`/quiz L02`)
+> LARP topic L02 (planned Thu 5 Nov) · Part A ⏱ 20 min · Part B ⏱ 20 min · Quiz ⏱ 15 min (`/quiz L02`)
 > Builds on: A01 (you wrote the server half yourself), L01 (event loop).
 > Running the snippets is optional: `uv run --with fastapi --with uvicorn python file.py`. Reading them is enough.
 
