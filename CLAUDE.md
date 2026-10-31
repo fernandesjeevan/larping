@@ -15,6 +15,15 @@ anything needing Redis/Postgres is optional and marked ⚙.
 Saturday lab work lives in `labs/` (one folder per lab), done mostly on the personal laptop and
 on the work laptop when possible. GitHub remote: the private repo `larping`.
 
+## Two laptops
+- Machine-specific facts (which laptop, installed tools, how to run the planner script) live in
+  `CLAUDE.local.md`, which is git-ignored so each laptop keeps its own. If it's missing, ask
+  "work or personal laptop?", check what's installed (python, uv, docker, podman), and create it.
+- A SessionStart hook in `.claude/settings.json` runs `git pull --ff-only` so each session
+  starts synced. If it failed (offline, local changes), say so before teaching.
+- Wrap-up always ends with commit + push, so the other laptop picks it up. Tag the `JOURNAL.md`
+  entry and commit message with the machine (`[work]` / `[personal]`).
+
 ## The learner
 Self-described beginner in networking (start from zero; never assume TCP/socket knowledge).
 Learns in **10–60 min break-time sittings**. Keep each teaching chunk ≤ 20 min, with a clear
@@ -68,8 +77,8 @@ question first.
    `JOURNAL.md` entry. Append flashcards if any.
    Excel: `done <ID> "<topic>" --score x/y --note "<struggle or insight>"` for each finished
    session, then `next "<ID>:<topic>" ...` with the next 3–4 sessions.
-2. Update the Excel planner with `tools/update_planner.py` (run via
-   `uv run --no-project --with openpyxl python tools/update_planner.py ...`):
+2. Update the Excel planner with `tools/update_planner.py` (run it the way `CLAUDE.local.md`
+   says; on the work laptop: `uv run --no-project --with openpyxl python tools/update_planner.py ...`):
    LARP quiz scores (`larp`), finished labs (`lab`), pattern progress (`pattern`), and a line in
    the Daily Plan notes of the *planned* date saying when it was actually done (`note`).
    If the file is open in Excel, ask the learner to close it.

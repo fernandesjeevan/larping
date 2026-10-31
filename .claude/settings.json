@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "git",
+            "args": ["pull", "--ff-only", "--quiet"],
+            "timeout": 30,
+            "statusMessage": "Syncing larping repo from GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}
