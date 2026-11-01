@@ -8,6 +8,10 @@ Excel marathon moved **+1 week** (D01 + L01 now Wed 4 Nov, LAB00 Sat 7 Nov, ends
 Sun 1 – Tue 3 are a prep mini-week: networking basics from zero so L01 and LAB00 make sense.
 From Wed 4 the sessions line up with the planner days again (L01 Wed, L02 Thu, mock Fri, LAB00 Sat).
 
+**Planner v5 (from Wed 4):** weeknights 22:30–00:00 project card, 00:00–01:00 LARP (L01 Wed, L02 Thu,
+mock Fri); DSA 18:15–19:15 at the office; office breaks: Fundamentals FN01 (Wed 4 – Thu 5), FN02 (Fri 6 –
+Mon 9) from the `Fundamentals` sheet. See `evening-plan.md` and the planner's Today sheet.
+
 Every session is **10–20 min** so it fits a break. Do them in order; tick as you go.
 Long free stretch? Chain several. Only 10 minutes? Do one.
 

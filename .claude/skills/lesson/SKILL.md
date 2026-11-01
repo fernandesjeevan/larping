@@ -28,7 +28,7 @@ These are passive: point the learner at the file (or teach its content in chat i
 ~5 min each), then ask its "Check yourself" questions one at a time and grade them 0–2. The
 learner is a networking beginner, so explain any term the file uses that it hasn't defined.
 After the last part of a LARP topic, run `/quiz <Lxx>` using that topic's questions from the
-LARP Bank sheet in `Marathon_Daily_Planner_v4.xlsx`.
+LARP Bank sheet in `Marathon_Daily_Planner_v5.xlsx`.
 
 When week 1 (`PLAN.md`) is done, write the next `PLAN.md` from the planner's next week: its
 LARP topics and its Saturday lab, pulled forward into break-sized sessions. Write new

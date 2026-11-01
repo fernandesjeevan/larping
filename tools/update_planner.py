@@ -1,9 +1,11 @@
-"""Write learning progress into Marathon_Daily_Planner_v4.xlsx.
+"""Write learning progress into Marathon_Daily_Planner_v5.xlsx (v4 is in archive/).
 
 Run with:  uv run --no-project --with openpyxl python tools/update_planner.py <command> ...
+(personal laptop: python tools/update_planner.py <command> ...)
 
 Commands:
   larp L01 --scores 2,1,2,0,1,2,2,1,1   score questions 1..N (0-2); score < 2 ticks 'Revisit'
+  fund FN01 --scores 2,1,2,2,1,2,2      same, for the 'Fundamentals' sheet (FN01-FN15)
   lab LAB00 [--note "one-line explain-it note"]
   pattern "Rate limiting" [--theory] [--built] [--explain] [--design]
   note 2026-10-28 "LARP L01 done on 29 Oct (catch-up)"   append to Daily Plan 'Notes / carry-over'
@@ -19,7 +21,7 @@ from pathlib import Path
 
 import openpyxl
 
-PLANNER = Path(__file__).resolve().parent.parent / "Marathon_Daily_Planner_v4.xlsx"
+PLANNER = Path(__file__).resolve().parent.parent / "Marathon_Daily_Planner_v5.xlsx"
 TICK, EMPTY = "☑", "☐"
 
 
@@ -27,8 +29,8 @@ def header_map(ws, row: int) -> dict[str, int]:
     return {str(c.value).strip(): c.column for c in ws[row] if c.value is not None}
 
 
-def cmd_larp(wb, args) -> None:
-    ws = wb["LARP Bank"]
+def cmd_larp(wb, args, sheet: str = "LARP Bank") -> None:
+    ws = wb[sheet]
     cols = header_map(ws, 4)
     scores = [int(s) for s in args.scores.split(",")] if args.scores else []
     if any(s not in (0, 1, 2) for s in scores):
@@ -149,9 +151,19 @@ def cmd_show(wb, _args) -> None:
             scored.setdefault(row[cols["ID"] - 1], []).append(score)
     for lid, s in scored.items():
         print(f"LARP {lid}: {sum(s)}/{2 * len(s)}")
+    fs = wb["Fundamentals"]
+    fcols = header_map(fs, 4)
+    fscored: dict[str, list[int]] = {}
+    for row in fs.iter_rows(min_row=5, values_only=True):
+        score = row[fcols["My score 0-2"] - 1]
+        if isinstance(score, int):
+            fscored.setdefault(row[fcols["ID"] - 1], []).append(score)
+    for fid, s in fscored.items():
+        print(f"Fundamentals {fid}: {sum(s)}/{2 * len(s)}")
+    lcols = header_map(wb["Backend Labs"], 4)
     for row in wb["Backend Labs"].iter_rows(min_row=5, values_only=True):
-        if row[4] == TICK:
-            print(f"LAB done: {row[2]}")
+        if row[lcols["Done"] - 1] == TICK:
+            print(f"LAB done: {row[lcols['Lab'] - 1]}")
     pcols = header_map(wb["Backend Patterns"], 4)
     for row in wb["Backend Patterns"].iter_rows(min_row=5, values_only=True):
         ticks = [k for k in ("Theory", "Built", "Explain", "Design") if row[pcols[k] - 1] == TICK]
@@ -163,6 +175,7 @@ def main() -> None:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
     s = sub.add_parser("larp"); s.add_argument("id"); s.add_argument("--scores", required=True)
+    s = sub.add_parser("fund"); s.add_argument("id"); s.add_argument("--scores", required=True)
     s = sub.add_parser("lab"); s.add_argument("id"); s.add_argument("--note")
     s = sub.add_parser("pattern"); s.add_argument("name")
     for f in ("theory", "built", "explain", "design"):
@@ -175,7 +188,7 @@ def main() -> None:
     args = p.parse_args()
 
     wb = openpyxl.load_workbook(PLANNER)
-    commands = {"larp": cmd_larp, "lab": cmd_lab, "pattern": cmd_pattern, "note": cmd_note,
+    commands = {"larp": cmd_larp, "fund": lambda wb_, a: cmd_larp(wb_, a, "Fundamentals"), "lab": cmd_lab, "pattern": cmd_pattern, "note": cmd_note,
                 "done": cmd_done, "next": cmd_next, "show": cmd_show}
     commands[args.cmd](wb, args)
     if args.cmd != "show":

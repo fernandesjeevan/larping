@@ -139,6 +139,27 @@ Tutor: update this after every sitting. Detail on *how it went* goes in `JOURNAL
 | L69 | SQL interview patterns | ⬜ | | |
 | L70 | Voice and multimodal pipelines (overview) | ⬜ | | |
 
+## 2b. ➕ Fundamentals (first-round basics, office micro-sessions, `Fundamentals` sheet)
+| ID | Topic | Planned | Status | Quiz |
+|---|---|---|---|---|
+| FN01 | OOP: the four pillars | Wed 4 – Thu 5 Nov | ⬜ | |
+| FN02 | Python OOP: ABC, MRO, super, methods, dunders, dataclasses | Fri 6 – Mon 9 Nov | ⬜ | |
+| FN03 | Python data model: mutability, identity, copies, hashing | Tue 10 – Wed 11 Nov | ⬜ | |
+| FN04 | Functions: *args/**kwargs, scope, closures, decorators | Thu 12 – Fri 13 Nov | ⬜ | |
+| FN05 | Iterators, generators, context managers | Mon 16 – Tue 17 Nov | ⬜ | |
+| FN06 | Composition vs inheritance, SOLID, DI | Wed 18 – Thu 19 Nov | ⬜ | |
+| FN07 | Design patterns in Python | Fri 20 – Mon 23 Nov | ⬜ | |
+| FN08 | Exceptions, memory, GIL, interpreter | Tue 24 – Wed 25 Nov | ⬜ | |
+| FN09 | Big-O of Python data structures | Thu 26 Nov | ⬜ | |
+| FN10 | DBMS: keys, normalisation, ACID, joins, indexes | Fri 27 – Mon 30 Nov | ⬜ | |
+| FN11 | SQL basics: execution order, window functions, classics | Tue 1 – Wed 2 Dec | ⬜ | |
+| FN12 | OS: processes, threads, deadlock, memory, scheduling | Thu 3 – Fri 4 Dec | ⬜ | |
+| FN13 | Networking recap: layers, TCP/UDP, URL to page, HTTP | Mon 7 Dec | ⬜ | |
+| FN14 | Git essentials | Tue 8 Dec | ⬜ | |
+| FN15 | Testing basics: pyramid, pytest, fixtures, mocking | Wed 9 – Thu 10 Dec | ⬜ | |
+
+Fri 11 Dec: review everything marked Revisit. Must-finish = Sunday of the following week.
+
 ## 3. ➕ Long-term CS foundations (5–10 year horizon, self-study after the course)
 | ID | Subject | Best book | Best free course | Other materials | Status |
 |---|---|---|---|---|---|
@@ -166,3 +187,5 @@ Every insertion, reorder or skip, with the reason, so the plan's evolution is tr
 | 2026-10-29 | ➕ S02b Bytes vs text, inserted before S03 | S03–S05 and N01 use `b"..."`, `.encode()`, `.decode()` and byte-counted `Content-Length` without ever explaining them; a networking beginner would trip on that. |
 | 2026-10-30 | ➕ Section 3: Long-term CS foundations F01–F15 (book, free course, materials per subject) | Learner asked for the subjects to master over the next 5–10 years; kept as a self-study reference list after the backend patterns + LARP course. |
 | 2026-10-31 | ↪ Whole schedule moved +1 week: Excel marathon now Wed 4 Nov → Sun 30 May (L01 Wed 4, L02 Thu 5, LAB00 Sat 7); PLAN.md week 1 now Sun 1 – Sun 8 with S01–S05 as prep Sun 1 – Mon 2 | Nothing from the Thu 29 – Sun 1 catch-up was started. A +1 week shift keeps the weekly rhythm (weeknight project + LARP, Fri mock, Sat lab) intact. |
+| 2026-10-31 | ➕ Section 2b: Fundamentals FN01–FN15 (OOP, Python core, SOLID, patterns, DBMS, SQL, OS, networking, Git, testing), 96 questions in a new `Fundamentals` sheet, office micro-sessions 4 Nov – 11 Dec | LARP bank assumed the basics (OOP only in L54 on 11 Feb); first-round interviews ask "what is an ABC / polymorphism" early. |
+| 2026-10-31 | ↪ Planner v5: weeknights 22:30–00:00 project + 00:00–01:00 LARP (was 22:00/23:45), DSA 18:15–19:15 at the office, a SHIP week after stages 1–5, Stage 6 kept → ends Sun 4 Jul 2027; three dates per item (initial v4 / planned v5 / must finish by). LARP and lab dates unchanged. v4 in `archive/`. | Real evenings: gym with a friend-trainer, family until ~22:30, so 30 min/night less than v4 assumed. |

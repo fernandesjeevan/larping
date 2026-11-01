@@ -6,7 +6,7 @@ apply here. Do not create pipeline files.
 
 ## Scope
 Only two things live here: **backend patterns / Saturday labs** and **LARP topics** (interview
-prep) from `Marathon_Roadmap_v4.docx` / `Marathon_Daily_Planner_v4.xlsx`. The project cards
+prep) from `Marathon_Roadmap_v4.docx` / `Marathon_Daily_Planner_v5.xlsx`. The project cards
 (DocuLens D01..., SRE, Translator) are done elsewhere in the evenings. Don't plan or teach them here.
 
 The repo is synced with git between a **work laptop** (restricted: Python 3.11, uv, curl,

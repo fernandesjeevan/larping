@@ -16,7 +16,7 @@ Act as a senior interviewer hiring a 3-YOE backend + AI engineer. Source topics 
 - no argument → the last 3 completed lessons.
 
 ## Question source for a LARP id (L01, L02, ...)
-Use that topic's numbered questions from the `LARP Bank` sheet of `Marathon_Daily_Planner_v4.xlsx`
+Use that topic's numbered questions from the `LARP Bank` sheet (or `Fundamentals` for FN01-FN15; score with `fund`) of `Marathon_Daily_Planner_v5.xlsx`
 (columns: ID, #, Type, Question, Answer key). Read them with
 `uv run --no-project --with openpyxl python -c ...` (set `PYTHONUTF8=1`). Ask them in order,
 don't show the key, and at the end write the scores with
