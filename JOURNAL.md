@@ -22,3 +22,7 @@ session. Append new entries at the bottom without reading the file.
 - Insights for next time: the learner wants local files (not online docs) and practical plans that don't
   spread thin; 0 hours logged so far, so the first win is the doculens `/health` commit.
 - Added to tracker: ➕ 2b Fundamentals FN01–FN15; v5 change-log row.
+
+## 2026-11-01 [personal] · planning follow-up
+- Roadmap docx made v5-synced (`Marathon_Roadmap_v5.docx`, v4 archived); Word-checked, TOC refreshed, 89 pages.
+- Council verdicts #1-#3 + final decisions saved to `council-verdicts.md`; online council doc deleted.
