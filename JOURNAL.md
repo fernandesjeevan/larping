@@ -14,3 +14,11 @@ session. Append new entries at the bottom without reading the file.
 - Scores: ...
 - Added to tracker: ...
 -->
+
+### 2026-10-31 [personal] · planning (no lesson)
+- Taught: nothing; re-planned around the real evening (gym with a physio-friend trainer, family until ~22:30).
+- Decided: planner v5. Weeknights 22:30–00:00 project, 00:00–01:00 LARP; DSA 18:15–19:15 at the office
+  (normal days); Fundamentals FN01–FN15 in 5–10 min office breaks; SHIP week after stages 1–5; ends Sun 4 Jul 2027.
+- Insights for next time: the learner wants local files (not online docs) and practical plans that don't
+  spread thin; 0 hours logged so far, so the first win is the doculens `/health` commit.
+- Added to tracker: ➕ 2b Fundamentals FN01–FN15; v5 change-log row.

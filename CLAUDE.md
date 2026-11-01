@@ -79,7 +79,7 @@ question first.
    session, then `next "<ID>:<topic>" ...` with the next 3–4 sessions.
 2. Update the Excel planner with `tools/update_planner.py` (run it the way `CLAUDE.local.md`
    says; on the work laptop: `uv run --no-project --with openpyxl python tools/update_planner.py ...`):
-   LARP quiz scores (`larp`), finished labs (`lab`), pattern progress (`pattern`), and a line in
+   LARP quiz scores (`larp`), Fundamentals scores (`fund`), finished labs (`lab`), pattern progress (`pattern`), and a line in
    the Daily Plan notes of the *planned* date saying when it was actually done (`note`).
    If the file is open in Excel, ask the learner to close it.
 3. `git add -A && git commit` with a short message, then `git push` if a remote is configured.
