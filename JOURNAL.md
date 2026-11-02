@@ -26,3 +26,13 @@ session. Append new entries at the bottom without reading the file.
 ## 2026-11-01 [personal] · planning follow-up
 - Roadmap docx made v5-synced (`Marathon_Roadmap_v5.docx`, v4 archived); Word-checked, TOC refreshed, 89 pages.
 - Council verdicts #1-#3 + final decisions saved to `council-verdicts.md`; online council doc deleted.
+
+- 2026-11-02 [work] S01 mid-session: Q2 struggle, unclear why a 127.0.0.1 listener cannot be reached from another machine. Re-explained as "one machine has several network cards (doors)"; experiment: python http.server bound to 127.0.0.1 vs 0.0.0.0, curl own Wi-Fi IP.
+- 2026-11-02 [work] S02: could describe the handshake but could not turn it into a latency number (didn't count round trips: handshake 1 RTT + request/response 1 RTT = 400 ms). Re-check with a 2-connection variant later.
+- 2026-11-02 [work] S02 check: Q1 misconception "reliable => one recv gets the whole send" (key S02 idea, must fix before S03/S04). Q3 answered "byte stream" for recv()==b"" (did not know = peer closed/EOF). Q2 1/2.
+
+## 2026-11-02 [work] · S01 + S02 (office breaks)
+- S01 IP/ports/packets 5/6: ran nslookup/netstat; spotted own Postgres on 0.0.0.0:5432. Bind address only clicked with the "OS listening table, match (IP, port) like a dict key" framing.
+- S02 TCP 4/6 (+ round-trip q 1/2): HELLO/WORLD recv demo made "stream, not messages" land; predicted the merge case on its own.
+- Tutor fixes from learner feedback: questions end the message (no answer after it); define every term first (S02 got a glossary); turned off Claude Code prompt suggestions (they pre-filled answers).
+- Removed the user-level /council skill. Created missing CLAUDE.local.md (work laptop). S01 Try-it now uses `curl.exe`.

@@ -10,8 +10,8 @@ Tutor: update this after every sitting. Detail on *how it went* goes in `JOURNAL
 ## 0. Networking from zero
 | ID | Topic | Status | Taught on | Notes |
 |---|---|---|---|---|
-| S01 | IP addresses, ports, packets, DNS, layers | ⬜ | | |
-| S02 | TCP: handshake, reliability, byte stream, close | ⬜ | | |
+| S01 | IP addresses, ports, packets, DNS, layers | ✅ | 2026-11-02 | 5/6; bind address 127.0.0.1 vs 0.0.0.0 needed re-explaining |
+| S02 | TCP: handshake, reliability, byte stream, close | ✅ | 2026-11-02 | 4/6 + RTT q 1/2; recv/stream idea fixed via demo; RTT counting weak |
 | S02b ➕ | Bytes vs text: `bytes`, `str`, UTF-8, encode/decode | ⬜ | | added 29 Oct, see log |
 | S03 | Sockets hands-on: echo server, `recv` rules | ⬜ | | |
 | S04 | Framing (delimiter / length prefix / close) + exercise N01 | ⬜ | | |
@@ -190,3 +190,4 @@ Every insertion, reorder or skip, with the reason, so the plan's evolution is tr
 | 2026-10-31 | ➕ Section 2b: Fundamentals FN01–FN15 (OOP, Python core, SOLID, patterns, DBMS, SQL, OS, networking, Git, testing), 96 questions in a new `Fundamentals` sheet, office micro-sessions 4 Nov – 11 Dec | LARP bank assumed the basics (OOP only in L54 on 11 Feb); first-round interviews ask "what is an ABC / polymorphism" early. |
 | 2026-10-31 | ↪ Planner v5: weeknights 22:30–00:00 project + 00:00–01:00 LARP (was 22:00/23:45), DSA 18:15–19:15 at the office, a SHIP week after stages 1–5, Stage 6 kept → ends Sun 4 Jul 2027; three dates per item (initial v4 / planned v5 / must finish by). LARP and lab dates unchanged. v4 in `archive/`. | Real evenings: gym with a friend-trainer, family until ~22:30, so 30 min/night less than v4 assumed. |
 | 2026-11-01 | ↪ Roadmap docx synced to v5 (`Marathon_Roadmap_v5.docx`; v4 in `archive/`): new times, office-time section, SHIP weeks 7/13/18/24/30 inserted, project weeks renumbered per stage with must-by dates, stage + gate tables on v5 dates. LARP Quiz Book dates unchanged. Council write-ups moved to `council-verdicts.md` (online doc deleted). | Keep the companion doc consistent with the planner so nothing contradicts. |
+| 2026-11-02 | ➕ S02 "Words you need first" glossary (SYN/ACK/FIN/RST spelled out, socket, OS buffer, `send()`, `recv()`) + runnable recv demo | S02 used SYN/FIN/RST and asked about `recv()` before any session defined them (recv was only introduced in S03); learner couldn't answer Q1/Q3 fairly. |

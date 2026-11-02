@@ -17,8 +17,8 @@ Long free stretch? Chain several. Only 10 minutes? Do one.
 
 | ✓ | # | Day | Session | ⏱ | Type | File |
 |---|---|---|---|---|---|---|
-| ☐ | 1 | Sun 1 | How computers find each other (IP, ports, packets) | 10–15 | read + 3 commands | `net101/S01-how-computers-find-each-other.md` |
-| ☐ | 2 | Sun 1 | TCP: reliable byte stream, handshake | 15 | read | `net101/S02-tcp-reliable-byte-stream.md` |
+| ☑ | 1 | Sun 1 | How computers find each other (IP, ports, packets) | 10–15 | read + 3 commands | `net101/S01-how-computers-find-each-other.md` |
+| ☑ | 2 | Sun 1 | TCP: reliable byte stream, handshake | 15 | read | `net101/S02-tcp-reliable-byte-stream.md` |
 | ☐ | 2b ➕ | Sun 1 | Bytes vs text (encode/decode, UTF-8) | 10 | read + Python shell | `net101/S02b-bytes-vs-text.md` |
 | ☐ | 3 | Sun 1 | Sockets hands-on: echo server | 15–20 | code along | `net101/S03-sockets-hands-on.md` |
 | ☐ | 4 | Mon 2 | Framing: where does a message end? | 20–25 | exercise + tests | `net101/S04-framing.md` → `lessons/N01-framing/` |
