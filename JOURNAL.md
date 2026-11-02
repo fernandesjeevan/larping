@@ -36,3 +36,6 @@ session. Append new entries at the bottom without reading the file.
 - S02 TCP 4/6 (+ round-trip q 1/2): HELLO/WORLD recv demo made "stream, not messages" land; predicted the merge case on its own.
 - Tutor fixes from learner feedback: questions end the message (no answer after it); define every term first (S02 got a glossary); turned off Claude Code prompt suggestions (they pre-filled answers).
 - Removed the user-level /council skill. Created missing CLAUDE.local.md (work laptop). S01 Try-it now uses `curl.exe`.
+- 2026-11-02 [work] S02b warm-up: RTT re-check (2 sequential new connections) answered 400 ms; still not counting per-connection cost.
+- 2026-11-02 [work] S02b 4/6: predicted len 5/6 and ₹100=6 bytes; needed scaffolding for split(b"
+") / .decode() fixes; bad-UTF-8 answer missed the 400 reply and the uncaught-crash consequence.

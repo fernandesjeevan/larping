@@ -12,7 +12,8 @@ Tutor: update this after every sitting. Detail on *how it went* goes in `JOURNAL
 |---|---|---|---|---|
 | S01 | IP addresses, ports, packets, DNS, layers | ✅ | 2026-11-02 | 5/6; bind address 127.0.0.1 vs 0.0.0.0 needed re-explaining |
 | S02 | TCP: handshake, reliability, byte stream, close | ✅ | 2026-11-02 | 4/6 + RTT q 1/2; recv/stream idea fixed via demo; RTT counting weak |
-| S02b ➕ | Bytes vs text: `bytes`, `str`, UTF-8, encode/decode | ⬜ | | added 29 Oct, see log |
+| S02b ➕ | Bytes vs text: `bytes`, `str`, UTF-8, encode/decode | ✅ | 2026-11-02 | 4/6; str/bytes fixes needed scaffolding (thought b"
+" needs per-char conversion) |
 | S03 | Sockets hands-on: echo server, `recv` rules | ⬜ | | |
 | S04 | Framing (delimiter / length prefix / close) + exercise N01 | ⬜ | | |
 | S05 | HTTP/1.1 as text, status codes, keep-alive, HTTPS/TLS | ⬜ | | |

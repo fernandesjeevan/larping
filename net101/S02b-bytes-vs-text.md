@@ -2,6 +2,19 @@
 > ⏱ 10 min · Day 1 · Passive + a few lines in a Python shell · Prev: S02 · Next: S03
 > ➕ Added after the first plan: every later session uses `b"..."`, `.encode()` and `.decode()`.
 
+## Words you need first
+| Word | Plain meaning |
+|---|---|
+| **bit** | a single 0 or 1 |
+| **byte** | 8 bits, so a number from 0 to 255. The unit everything on a network is measured in. |
+| **character** | one letter/symbol as a human sees it: `a`, `é`, `₹`, `😀` |
+| **encoding** | the agreed rulebook for turning characters into bytes and back |
+| **ASCII** | an old rulebook: 128 characters (English letters, digits, punctuation), 1 byte each |
+| **UTF-8** | today's standard rulebook: every character in every language. ASCII characters still take 1 byte; others take 2–4. |
+| **`\xc3`** | how Python *shows* a byte that isn't a printable ASCII character: `\x` + two hex digits. `\xc3` = 195. |
+| **`Content-Length`** | (preview of S05) a line in an HTTP message saying "the body is N **bytes** long" |
+| **400** | (preview of S05) the HTTP reply code for "bad request: what you sent me is broken" |
+
 ## The idea
 Networks, files and sockets only move **bytes**: numbers 0–255. Python's `str` holds **text**
 (characters). To send text you must **encode** it into bytes; to read bytes as text you must
@@ -40,6 +53,9 @@ b'GET / HTTP/1.1'
 
 ## Check yourself
 1. `"₹100".encode("utf-8")` has how many bytes? (Guess, then check in Python. ₹ is not ASCII.)
+   b'\xe2\x82\xb9100'
 2. Your server reads `data = conn.recv(1024)` and does `data.split("\r\n")`. What error do you
    get, and what are two ways to fix it?
+   i don't know you must help
 3. Why must `Content-Length` be computed from the encoded body, not the string?
+because the encoded length is different

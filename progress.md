@@ -1,13 +1,13 @@
 # Session brief (the ONLY file read at session start; keep it under ~40 lines)
 
-**Now:** S02b Bytes vs text · `net101/S02b-bytes-vs-text.md` (S01 5/6, S02 4/6 done 2026-11-02)
+**Now:** S03 Sockets hands-on · `net101/S03-sockets-hands-on.md` (S02b 4/6 done 2026-11-02)
 **Open exercises:** none started (N01 framing, A01 LAB00 later)
 
 ## Up next (max 4)
-1. S02b ➕ Bytes vs text · `net101/S02b-...`
-2. S03 Sockets hands-on · `net101/S03-...`
-3. S04 Framing · `net101/S04-framing.md`
-4. S05 HTTP is text on TCP · `net101/S05-...`
+1. S03 Sockets hands-on · `net101/S03-...`
+2. S04 Framing · `net101/S04-framing.md`
+3. S05 HTTP is text on TCP · `net101/S05-...`
+4. L01 Part A (Tue 3) · `larp/L01-async-await.md`
 
 ## Carry forward (struggles, insights, owed follow-ups; rolling, max ~8 bullets)
 - Learner is a self-described networking beginner: start from zero, analogy first, then runnable code.
@@ -17,6 +17,8 @@
 - S01: bind address (127.0.0.1 vs 0.0.0.0) needed 2 re-explanations; the "OS listening table, match (IP, port)
   like a dict key" framing clicked, doors analogy didn't. Re-check in S03 when they bind a socket.
 - Learner wants questions to END the message: never reveal or pre-explain the answer (S02 feedback).
+- S02b: str vs bytes TypeError fixes needed scaffolding; answers "exception handling" vaguely: push for which
+  exception + what reply (400). RTT re-check 2 conns: 400 then 800 after nudge.
 - S02: round-trip counting weak (new conn = handshake RTT + request RTT); re-check with a variant. "recv returns what's in the
   tray now; b'' = peer closed" landed after the HELLO/WORLD demo. Scan session files for undefined terms first.
 - On work laptop PowerShell `curl` = Invoke-WebRequest; always write `curl.exe`.
@@ -24,5 +26,5 @@
 ## Last 3 scores
 | Date | What | Score |
 |---|---|---|
+| 2026-11-02 | S02b Bytes vs text | 4/6 |
 | 2026-11-02 | S02 TCP | 4/6 (+ RTT q 1/2) |
-| 2026-11-02 | S01 IP, ports, packets | 5/6 |
