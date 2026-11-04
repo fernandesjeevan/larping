@@ -5,7 +5,8 @@ Run with:  uv run --no-project --with openpyxl python tools/update_planner.py <c
 
 Commands:
   larp L01 --scores 2,1,2,0,1,2,2,1,1   score questions 1..N (0-2); score < 2 ticks 'Revisit'
-  fund FN01 --scores 2,1,2,2,1,2,2      same, for the 'Fundamentals' sheet (FN01-FN15)
+  fund FN01 --scores 2,1,2,2,1,2,2      same, for Fundamentals (FN01-FN15)
+      Both write to the 'Study Queue' sheet; 'LARP Bank' / 'Fundamentals' mirror it via formulas.
   lab LAB00 [--note "one-line explain-it note"]
   pattern "Rate limiting" [--theory] [--built] [--explain] [--design]
   note 2026-10-28 "LARP L01 done on 29 Oct (catch-up)"   append to Daily Plan 'Notes / carry-over'
@@ -29,15 +30,18 @@ def header_map(ws, row: int) -> dict[str, int]:
     return {str(c.value).strip(): c.column for c in ws[row] if c.value is not None}
 
 
-def cmd_larp(wb, args, sheet: str = "LARP Bank") -> None:
-    ws = wb[sheet]
+STUDY = "Study Queue"  # LARP + Fundamentals merged; scores live here, the two banks mirror them
+
+
+def cmd_larp(wb, args, track: str = "LARP") -> None:
+    ws = wb[STUDY]
     cols = header_map(ws, 4)
     scores = [int(s) for s in args.scores.split(",")] if args.scores else []
     if any(s not in (0, 1, 2) for s in scores):
         sys.exit("scores must be 0, 1 or 2")
     found = 0
     for row in ws.iter_rows(min_row=5):
-        if row[cols["ID"] - 1].value != args.id:
+        if row[cols["ID"] - 1].value != args.id or row[cols["Track"] - 1].value != track:
             continue
         num = row[cols["#"] - 1].value
         if not isinstance(num, int) or num > len(scores):
@@ -142,24 +146,15 @@ def cmd_next(wb, args) -> None:
 
 
 def cmd_show(wb, _args) -> None:
-    ws = wb["LARP Bank"]
+    ws = wb[STUDY]
     cols = header_map(ws, 4)
-    scored: dict[str, list[int]] = {}
+    scored: dict[tuple[str, str], list[int]] = {}
     for row in ws.iter_rows(min_row=5, values_only=True):
         score = row[cols["My score 0-2"] - 1]
         if isinstance(score, int):
-            scored.setdefault(row[cols["ID"] - 1], []).append(score)
-    for lid, s in scored.items():
-        print(f"LARP {lid}: {sum(s)}/{2 * len(s)}")
-    fs = wb["Fundamentals"]
-    fcols = header_map(fs, 4)
-    fscored: dict[str, list[int]] = {}
-    for row in fs.iter_rows(min_row=5, values_only=True):
-        score = row[fcols["My score 0-2"] - 1]
-        if isinstance(score, int):
-            fscored.setdefault(row[fcols["ID"] - 1], []).append(score)
-    for fid, s in fscored.items():
-        print(f"Fundamentals {fid}: {sum(s)}/{2 * len(s)}")
+            scored.setdefault((row[cols["Track"] - 1], row[cols["ID"] - 1]), []).append(score)
+    for (track, sid), s in scored.items():
+        print(f"{'LARP' if track == 'LARP' else 'Fundamentals'} {sid}: {sum(s)}/{2 * len(s)}")
     lcols = header_map(wb["Backend Labs"], 4)
     for row in wb["Backend Labs"].iter_rows(min_row=5, values_only=True):
         if row[lcols["Done"] - 1] == TICK:
@@ -188,7 +183,7 @@ def main() -> None:
     args = p.parse_args()
 
     wb = openpyxl.load_workbook(PLANNER)
-    commands = {"larp": cmd_larp, "fund": lambda wb_, a: cmd_larp(wb_, a, "Fundamentals"), "lab": cmd_lab, "pattern": cmd_pattern, "note": cmd_note,
+    commands = {"larp": cmd_larp, "fund": lambda wb_, a: cmd_larp(wb_, a, "FUND"), "lab": cmd_lab, "pattern": cmd_pattern, "note": cmd_note,
                 "done": cmd_done, "next": cmd_next, "show": cmd_show}
     commands[args.cmd](wb, args)
     if args.cmd != "show":
