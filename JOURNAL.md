@@ -39,3 +39,9 @@ session. Append new entries at the bottom without reading the file.
 - 2026-11-02 [work] S02b warm-up: RTT re-check (2 sequential new connections) answered 400 ms; still not counting per-connection cost.
 - 2026-11-02 [work] S02b 4/6: predicted len 5/6 and ₹100=6 bytes; needed scaffolding for split(b"
 ") / .decode() fixes; bad-UTF-8 answer missed the 400 reply and the uncaught-crash consequence.
+
+## 2026-11-06 [work] · S03 started (stopped early), communication track added
+- Added an opt-in "delivery track" to /quiz (spoken transcript + seconds, wpm, defensive phrases, stakeholder round). OFF until learner says "delivery on".
+- Learner is ~4 days behind PLAN.md; chose not to reschedule anything: just continue in order.
+- S03: glossary + socket shape shown; S01 bind re-check question (127.0.0.1 vs colleague on Wi-Fi) asked but not answered yet. Ask it first next time.
+- Stopped early (job-market news); no sessions finished.

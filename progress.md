@@ -1,6 +1,7 @@
 # Session brief (the ONLY file read at session start; keep it under ~40 lines)
 
-**Now:** S03 Sockets hands-on · `net101/S03-sockets-hands-on.md` (S02b 4/6 done 2026-11-02)
+**Now:** S03 Sockets hands-on · `net101/S03-sockets-hands-on.md` (started 2026-11-06: glossary + shape done;
+  bind re-check Q pending, then the echo server code-along)
 **Open exercises:** none started (N01 framing, A01 LAB00 later)
 
 ## Up next (max 4)
@@ -21,6 +22,7 @@
   exception + what reply (400). RTT re-check 2 conns: 400 then 800 after nudge.
 - S02: round-trip counting weak (new conn = handshake RTT + request RTT); re-check with a variant. "recv returns what's in the
   tray now; b'' = peer closed" landed after the HELLO/WORLD demo. Scan session files for undefined terms first.
+- /quiz has an opt-in delivery track ("delivery on"): typed or spoken answers; learner self-reviews recordings.
 - On work laptop PowerShell `curl` = Invoke-WebRequest; always write `curl.exe`.
 
 ## Last 3 scores

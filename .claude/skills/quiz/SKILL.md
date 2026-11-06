@@ -36,3 +36,28 @@ don't show the key, and at the end write the scores with
    (not just a forgotten fact), add it to `TRACKER.md` as ➕.
 
 Do not reveal answers before the learner tries. Do not accept buzzwords without mechanism.
+
+## Delivery track (communication practice; OFF unless the learner asks for it)
+Only run this when the learner says so (e.g. "delivery on"). Goal: answers that are direct and
+confident but calm, concise and well structured. Holding a position calmly beats folding.
+
+**Input (learner's choice per session):**
+- Spoken: transcript pasted unedited + duration in seconds → also score pace (words ÷ minutes;
+  calm target 130–150 wpm, >170 = rushing).
+- Typed: normal text answers → score structure and phrasing only, no pace.
+The learner records themselves each session and self-reviews the audio; don't ask for it.
+
+**Per answer, after the content grade (0–2), give a delivery grade (0–2):**
+- Structure: Acknowledge → Explain → Check. One idea per sentence.
+- Defensive phrasing: e.g. "No, actually", "As I said", "But I did", "That's wrong". Quote the
+  exact phrase back.
+- Stopping: ends when the point is made, no piling on extra reasons.
+Then show ONE rewrite of the weakest sentence (same technical content, calmer delivery).
+
+**Stakeholder round:** after 2–3 questions, play a non-technical business stakeholder who challenges
+a decision ("Why can't we just…", "Seems over-engineered", "Other team says it's easy"). Folding
+scores 0 just like defensiveness does. Escalate once if they stay calm.
+
+**Logging:** keep delivery scores SEPARATE from the planner's `larp`/`fund` scores. Record as
+`D x/y` in `progress.md` last scores and `JOURNAL.md`. Weak phrasings go to `flashcards.md` as
+"Said: … → Better: …" cards. Keep all notes neutral: no personal or workplace details.
