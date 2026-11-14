@@ -3,6 +3,8 @@
 **Now:** S03 Sockets hands-on · `net101/S03-sockets-hands-on.md` (started 2026-11-06: glossary + shape done;
   bind re-check Q pending, then the echo server code-along)
 **Open exercises:** none started (N01 framing, A01 LAB00 later)
+**Checkpoint (May 2027):** review the route using real interview feedback. Real interviews start Feb 2027.
+  The route stays fixed until then; new doubts or roadmap ideas get parked for the checkpoint.
 
 ## Up next (max 4)
 1. S03 Sockets hands-on · `net101/S03-...`
@@ -11,6 +13,9 @@
 4. L01 Part A (Tue 3) · `larp/L01-async-await.md`
 
 ## Carry forward (struggles, insights, owed follow-ups; rolling, max ~8 bullets)
+- **2026-11-14 PLANNER RESET (the only one):** 0 of Nov 4-14 planned items done, so all planned/must-finish dates
+  moved +14d (D01 = Wed 18 Nov, end Sun 18 Jul 2027; v4 dates kept). Learner said a repeat is NOT acceptable:
+  refuse a 2nd reset, absorb slips into buffers/weekends. Pattern = prepping instead of starting; rule = 10-min minimum, never zero.
 - Learner is a self-described networking beginner: start from zero, analogy first, then runnable code.
 - Sittings are 10–60 min on work breaks; always stop at a clean point.
 - Planner is v5 (v4 in archive/): LARP 00:00–01:00, project 22:30–00:00, DSA 18:15 office, Fundamentals

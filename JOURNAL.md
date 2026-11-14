@@ -45,3 +45,10 @@ session. Append new entries at the bottom without reading the file.
 - Learner is ~4 days behind PLAN.md; chose not to reschedule anything: just continue in order.
 - S03: glossary + socket shape shown; S01 bind re-check question (127.0.0.1 vs colleague on Wi-Fi) asked but not answered yet. Ask it first next time.
 - Stopped early (job-market news); no sessions finished.
+
+## 2026-11-14 [personal] Planner reset (no lesson)
+- Learner frustrated: Nov 4-14 planned D01-D10, L01-L06, FN01-FN04, LAB00, 2 mocks; 0 done (S01-S02b + S03 start were off-plan prereqs).
+- Self-identified pattern: preparing/reading instead of starting.
+- One-time reset at learner's request: all v5 planned + must-finish dates +14d (whole weeks, weekdays kept), v4 initial dates untouched,
+  AI-102 exam fixed. Note in Start Here A4 + Daily Plan T2. Learner: "not acceptable next time".
+- New rule: 10-minute minimum, never a zero day.
