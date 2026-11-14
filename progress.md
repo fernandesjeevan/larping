@@ -16,6 +16,8 @@
 - **2026-11-14 PLANNER RESET (the only one):** 0 of Nov 4-14 planned items done. Re-flowed: D01 = TODAY Sat 14 Nov,
   Fridays = holiday, no BUF days/weekly mocks, must-finish = planned (no buffer); ends Wed 14 Jul 2027, AI-102 still 20 Feb.
   Learner said a repeat is NOT acceptable: refuse a 2nd reset. Pattern = prepping instead of starting; rule = 10-min minimum, never zero.
+- **2026-11-14 PATH DECIDED: SWE (backend + AI), no second thoughts.** Govt-job idea parked until ~Nov 2028 at the earliest;
+  if it resurfaces before then, it's the "prepare instead of start" loop: answer "parked" and point back to today's card.
 - Learner is a self-described networking beginner: start from zero, analogy first, then runnable code.
 - Sittings are 10–60 min on work breaks; always stop at a clean point.
 - Planner is v5 (v4 in archive/): LARP 00:00–01:00, project 22:30–00:00, DSA 18:15 office, Fundamentals
