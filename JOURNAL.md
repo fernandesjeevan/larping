@@ -52,3 +52,6 @@ session. Append new entries at the bottom without reading the file.
 - One-time reset at learner's request: all v5 planned + must-finish dates +14d (whole weeks, weekdays kept), v4 initial dates untouched,
   AI-102 exam fixed. Note in Start Here A4 + Daily Plan T2. Learner: "not acceptable next time".
 - New rule: 10-minute minimum, never a zero day.
+- Follow-up same day: learner asked for start TODAY with no buffer. Re-flowed from the pre-reset plan instead of +14d: D01 Sat 14 Nov,
+  Fridays holiday (BUF + Friday mock dropped), weekday frames kept, LARP Mon-Thu, labs Sat, mock&story Sun, must-finish = planned,
+  ends Wed 14 Jul 2027 (36 wks). Gates: G0 2 Dec, G1 16 Dec, v1.5 23 Dec, G2 3 Feb, PDF v1.0 10 Mar. 34 generic "Revisit" office micros dropped.
