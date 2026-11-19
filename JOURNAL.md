@@ -55,3 +55,13 @@ session. Append new entries at the bottom without reading the file.
 - Follow-up same day: learner asked for start TODAY with no buffer. Re-flowed from the pre-reset plan instead of +14d: D01 Sat 14 Nov,
   Fridays holiday (BUF + Friday mock dropped), weekday frames kept, LARP Mon-Thu, labs Sat, mock&story Sun, must-finish = planned,
   ends Wed 14 Jul 2027 (36 wks). Gates: G0 2 Dec, G1 16 Dec, v1.5 23 Dec, G2 3 Feb, PDF v1.0 10 Mar. 34 generic "Revisit" office micros dropped.
+
+## 2026-11-19 [work] Planner reset 2 (FINAL) + new timetable (no lesson)
+- Learner asked for "one last time" reset: 0 items done 14-18 Nov. Also set boundaries: work 09:00-18:30 only (was ~12 h/day),
+  gym 19:30-21:00, nothing at the office. Timetable: 22:30-00:00 project unchanged; LARP 00:00-01:00 -> 07:30-08:30 (40 min)
+  + Fundamentals (last 20 min). DSA paused. Sleep 00:00-07:15.
+- Re-flow (end date kept Wed 14 Jul 2027 at learner's choice): D01/L01/FN01 = Thu 19 Nov; stage-1 cards +5 slots, SHIP1 shrank
+  6 -> 1 day (Wed 30 Dec); LARP +3 slots (dropped 3 drills 25 Feb-2 Mar); FN +3 (dropped 3 Revisits, early Jan); labs +1 Sat
+  (dropped 1st redo, 19 Jun); Sun mocks +1 (dropped a repeated drill, 13 Jun); job hunt +1 week. Gates G0 8 Dec, G1 22 Dec,
+  v1.5 29 Dec; Stage 2+ cards unchanged. Lost: Sun 15 Nov READ ('Building effective agents'). Rows 14-18 Nov marked RESET.
+- Note in Start Here A4 + Daily Plan T7. No third reset.

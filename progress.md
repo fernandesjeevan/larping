@@ -13,15 +13,18 @@
 4. L01 Part A (Tue 3) · `larp/L01-async-await.md`
 
 ## Carry forward (struggles, insights, owed follow-ups; rolling, max ~8 bullets)
-- **2026-11-14 PLANNER RESET (the only one):** 0 of Nov 4-14 planned items done. Re-flowed: D01 = TODAY Sat 14 Nov,
-  Fridays = holiday, no BUF days/weekly mocks, must-finish = planned (no buffer); ends Wed 14 Jul 2027, AI-102 still 20 Feb.
-  Learner said a repeat is NOT acceptable: refuse a 2nd reset. Pattern = prepping instead of starting; rule = 10-min minimum, never zero.
+- **2026-11-19 RESET 2 = FINAL (learner called it "one last time").** 0 items done 14-18 Nov. D01 + L01 + FN01 = Thu 19 Nov,
+  end still Wed 14 Jul 2027, Fridays off, must-finish = planned. Slip absorbed: SHIP1 now 1 day (Wed 30 Dec), 3 LARP drills,
+  3 FN revisits, 1 lab redo, 1 Sunday drill dropped. Gates: G0 8 Dec, G1 22 Dec, v1.5 29 Dec; Stage 2+ unchanged.
+  NO third reset, whatever the reason: a slip is just a late card. Pattern = prepping instead of starting; 10-min minimum.
+- **2026-11-19 BOUNDARIES:** work 09:00-18:30 only (was 12 h/day), gym 19:30-21:00, nothing at the office.
+  Study = 07:30-08:30 LARP (40) + Fundamentals (20) on weekdays, 22:30-00:00 project, weekends. DSA paused. Protect these.
 - **2026-11-14 PATH DECIDED: SWE (backend + AI), no second thoughts.** Govt-job idea parked until ~Nov 2028 at the earliest;
   if it resurfaces before then, it's the "prepare instead of start" loop: answer "parked" and point back to today's card.
 - Learner is a self-described networking beginner: start from zero, analogy first, then runnable code.
-- Sittings are 10–60 min on work breaks; always stop at a clean point.
-- Planner is v5 (v4 in archive/): LARP 00:00–01:00, project 22:30–00:00, DSA 18:15 office, Fundamentals
-  FN01–FN15 in office breaks from Wed 4 Nov (`/quiz FN01`, score with `update_planner.py fund`).
+- Sittings now happen in the 07:30-08:30 morning slot (no office study); always stop at a clean point.
+- Planner is v5 (v4 in archive/): LARP 07:30-08:30 (+ FUND last 20 min), project 22:30-00:00, DSA paused.
+  Fundamentals FN01-FN15 via `/quiz FN01`, score with `update_planner.py fund`.
 - S01: bind address (127.0.0.1 vs 0.0.0.0) needed 2 re-explanations; the "OS listening table, match (IP, port)
   like a dict key" framing clicked, doors analogy didn't. Re-check in S03 when they bind a socket.
 - Learner wants questions to END the message: never reveal or pre-explain the answer (S02 feedback).
